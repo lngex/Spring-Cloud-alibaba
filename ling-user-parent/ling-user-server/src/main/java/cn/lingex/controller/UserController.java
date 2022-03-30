@@ -1,15 +1,14 @@
 package cn.lingex.controller;
 
 import cn.lingex.basic.pojo.domain.User;
+import cn.lingex.basic.pojo.query.BaseQuery;
 import cn.lingex.basic.result.JSONResult;
+import cn.lingex.basic.utils.PageList;
 import cn.lingex.service.IUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,8 +28,9 @@ public class UserController {
     private IUserService userService;
 
     @GetMapping
-    public List<User> list(){
-        return userService.list();
+    @ApiOperation("用户列表")
+    public JSONResult<PageList<User>> list(@RequestBody BaseQuery baseQuery){
+        return userService.pageList(baseQuery);
     }
 
     /**

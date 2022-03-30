@@ -80,6 +80,12 @@
         <dependency>
             <groupId>com.github.shijingsh</groupId>
             <artifactId>knife4j-micro-spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-simple</artifactId>
+                </exclusion>
+            </exclusions>
             <version>3.0.5</version>
             <type>pom</type>
         </dependency>

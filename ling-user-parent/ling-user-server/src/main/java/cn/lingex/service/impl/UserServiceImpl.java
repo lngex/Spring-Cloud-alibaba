@@ -3,12 +3,16 @@ package cn.lingex.service.impl;
 import cn.lingex.basic.exception.BusinessException;
 import cn.lingex.basic.pojo.domain.User;
 import cn.lingex.basic.pojo.dto.OrderDto;
+import cn.lingex.basic.pojo.query.BaseQuery;
 import cn.lingex.basic.result.JSONResult;
+import cn.lingex.basic.utils.PageList;
 import cn.lingex.basic.utils.SnUtils;
 import cn.lingex.feign.IOrderFeign;
 import cn.lingex.feign.StockFeign;
 import cn.lingex.mapper.UserMapper;
 import cn.lingex.service.IUserService;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import io.seata.spring.annotation.GlobalTransactional;
 import org.checkerframework.checker.units.qual.A;
@@ -69,5 +73,20 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         }
         // int i = 1/0;
         return JSONResult.getInstance("操作成功");
+    }
+
+    /**
+     * 分页查询
+     *
+     * @param baseQuery 基础条件
+     * @return 统一响应对象
+     */
+    @Override
+    public JSONResult<PageList<User>> pageList(BaseQuery baseQuery) {
+        Page<User> userPage = new Page<>(baseQuery.getCurrent(), baseQuery.getSize());
+        Page<User> userPage1 = userMapper.selectPage(userPage, null);
+        PageList<User> userPageList = new PageList<>();
+        PageList<User> userPageList1 = userPageList.setTotal(userPage1.getTotal()).setContent(userPage1.getRecords());
+        return JSONResult.getInstance(userPageList1);
     }
 }
