@@ -1,0 +1,32 @@
+spring:
+  main:
+    web-application-type: reactive # 解决Web版本冲突
+  profiles:
+    active: dev
+  application:
+    name: gateway-server  # 服务名-与nacos config dataId对应
+  cloud:
+    nacos:
+      config: # 配置中心配置
+        username: nacos # 配置中心用户名
+        password: nacos # 配置中心密码
+        context-path: /nacos
+        server-addr: 127.0.0.1:8848 # 配置中心地址
+        file-extension: yaml # 声明配置中心文件为yml格式
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#      routes:
+#        - id: order_route
+#          uri: lb://order-server
+#          predicates:
+#            - Path=/order/**
+#          filters:
+#            - StripPrefix=1
+#        - id: user_route
+#          uri: lb://user-server
+#          predicates:
+#            - Path=/user/**
+#          filters:
+#            - StripPrefix=1

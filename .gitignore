@@ -1,0 +1,10 @@
+.idea
+ling-support-parent/ling-basic-common/target
+ling-order-parent/ling-order-common/target
+ling-order-parent/ling-order-seerver/target
+ling-order-parent/ling-order-feign/target
+ling-stock-parent/ling-stock-common/target
+ling-stock-parent/ling-stock-servcer/target
+ling-stock-parent/ling-stock-feign/target
+ling-user-parent/ling-user-common/target
+ling-user-parent/ling-user-server/target
