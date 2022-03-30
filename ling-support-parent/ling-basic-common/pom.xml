@@ -75,5 +75,13 @@
             <artifactId>kryo-serializers</artifactId>
             <version>0.42</version>
         </dependency>
+
+        <!--knife4j-micro-包含swagger2依赖-->
+        <dependency>
+            <groupId>com.github.shijingsh</groupId>
+            <artifactId>knife4j-micro-spring-boot-starter</artifactId>
+            <version>3.0.5</version>
+            <type>pom</type>
+        </dependency>
     </dependencies>
 </project>

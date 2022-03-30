@@ -3,6 +3,8 @@ package cn.lingex.controller;
 import cn.lingex.basic.pojo.domain.User;
 import cn.lingex.basic.result.JSONResult;
 import cn.lingex.service.IUserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +22,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("user")
+@Api(tags = "基础用户")
 public class UserController {
 
     @Autowired
@@ -36,6 +39,7 @@ public class UserController {
      * @return 统一响应对象
      */
     @GetMapping("/vip/{id}")
+    @ApiOperation("vip充值")
     public JSONResult<String> vip(@PathVariable("id") Long id){
         return userService.vip(id);
     }
