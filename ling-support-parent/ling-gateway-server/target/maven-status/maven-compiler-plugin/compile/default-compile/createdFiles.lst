@@ -1,1 +1,3 @@
 cn\lingex\GatewayApp.class
+cn\lingex\basic\config\DocumentationConfig.class
+cn\lingex\controller\SwaggerHandler.class
