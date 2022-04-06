@@ -8,9 +8,10 @@ import cn.lingex.service.IUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * 基础用户控制器
@@ -27,9 +28,11 @@ public class UserController {
     @Autowired
     private IUserService userService;
 
-    @GetMapping
+    @PostMapping
     @ApiOperation("用户列表")
-    public JSONResult<PageList<User>> list(@RequestBody BaseQuery baseQuery){
+    public JSONResult<PageList<User>> list(@RequestBody BaseQuery baseQuery, HttpServletRequest request){
+        System.out.println(HttpHeaders.AUTHORIZATION +":"+request.getHeader(HttpHeaders.AUTHORIZATION));
+        System.out.println("token:"+request.getHeader("token"));
         return userService.pageList(baseQuery);
     }
 
