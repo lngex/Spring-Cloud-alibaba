@@ -1,13 +1,41 @@
-#基于SpringCloud alibaba的微服务基础环境
-    
-##项目环境
+# 基于SpringCloud alibaba的微服务基础环境
 
-|Spring Cloud| Spring Cloud Alibab| Spring boot |      jdk    |    NACOS    |    seata    |
+## 项目环境
+
+|Spring Cloud|Spring Cloud Alibaba| Spring boot |      jdk    |    NACOS    |    seata    |
 |------------| -------------------| ------------| ------------| ------------| ------------|
-| Hoxton.SR9 | 2.2.6.RELEASE      |2.3.2.RELEASE|       1.8   |     1.40    |     1.30    |
+| Hoxton.SR9 |    2.2.6.RELEASE   |2.3.2.RELEASE|       1.8   |     1.40    |     1.30    |
 
-##项目完成
+## 组件功能
+
+1. nacos：用于服务的注册与发现，配置中心
+2. dateway：用作服务为网关
+3. seata：用于分布式事务解决
+
+## 项目完成
+
 1. 集成网关，NACOS注册中心与配置中心(已完成)
 2. 集成seata分布式事务解决(已完成)
 3. 基于knife4j的分布式接口文档(已完成)
 4. 基于SpringSecurity或Oauth2的权限管理(待完成)
+
+## 目录结构
+
+### 基础服务目录结构
+
+    support-parent---------------------------------服务父级目录
+            |
+            common---------------------------------项目基础依赖
+            |
+            gateway-server-------------------------网关服务
+
+### 业务服务目录结构
+
+    parent---------------------------------服务父级目录
+         |
+         common----------------------------服务基础依赖
+         |
+         server----------------------------主要服务
+         |
+         feign-----------------------------用于其他服务调用的接口
+        
