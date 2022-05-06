@@ -30,7 +30,7 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("库存服务")
                 .description("库存服务接口文档说明")
-                .contact(new Contact("廖某", "www.baidu.com", "1902156923@qq.c0n"))
+                .contact(new Contact("廖某", "www.baidu.com", "1902156923@qq.com"))
                 .version("1.1")
                 .build();
     }

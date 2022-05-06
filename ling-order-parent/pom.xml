@@ -13,7 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>ling-order-common</module>
-        <module>ling-order-seerver</module>
+        <module>ling-order-server</module>
         <module>ling-order-feign</module>
     </modules>
 
