@@ -17,21 +17,25 @@
     </properties>
 
     <dependencies>
+        <!-- MyBatis-plus -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.5.1</version>
         </dependency>
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>2.10.2</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
             <version>2.0.5.RELEASE</version>
         </dependency>
+
         <!-- jsr303校验包 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -39,11 +43,13 @@
             <!-- 此处改为自定义SpringBoot版本 -->
             <version>${spring.boot.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
             <version>5.3.8</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-core</artifactId>
@@ -74,6 +80,13 @@
             <groupId>de.javakaffee</groupId>
             <artifactId>kryo-serializers</artifactId>
             <version>0.42</version>
+        </dependency>
+
+        <!-- redisson 分布式锁-->
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
+            <version>3.11.1</version>
         </dependency>
 
         <!--knife4j-micro-包含swagger2依赖-->

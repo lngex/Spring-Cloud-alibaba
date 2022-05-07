@@ -9,7 +9,7 @@ import cn.lingex.basic.result.JSONResult;
 import cn.lingex.basic.utils.PageList;
 import cn.lingex.basic.utils.SnUtils;
 import cn.lingex.feign.IOrderFeign;
-import cn.lingex.feign.StockFeign;
+import cn.lingex.feign.IStockFeign;
 import cn.lingex.mapper.UserMapper;
 import cn.lingex.service.IUserService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -17,6 +17,9 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import io.seata.spring.annotation.GlobalTransactional;
 import org.checkerframework.checker.units.qual.A;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
+import org.redisson.client.RedisClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -41,7 +44,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     private IOrderFeign orderFeign;
 
     @Autowired
-    private StockFeign stockFeign;
+    private IStockFeign stockFeign;
+
+    @Autowired
+    private RedissonClient redissonClient;
 
     /**
      * 充值Vip
@@ -67,12 +73,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
                 .setSn(SnUtils.getRandomIdByUUID())
                 .setUserId(id)
                 .setPayType(1);
+        // 添加订单信息
         JSONResult<String> save = orderFeign.save(orderDto);
+        // 减少库存
         JSONResult<String> save1 = stockFeign.save(1L);
         if (!save.getStatus() || !save1.getStatus()) {
             throw new BusinessException(save.getData());
         }
-        // int i = 1/0;
+        int i = 1 / 0;
         return JSONResult.getInstance("操作成功");
     }
 
@@ -84,6 +92,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
      */
     @Override
     public JSONResult<PageList<UserDto>> pageList(BaseQuery baseQuery) {
+        RLock lock = redissonClient.getLock("user:lock");
+        System.out.println("是否获取到锁：" + lock.tryLock());
         Page<UserDto> userPage = new Page<>(baseQuery.getCurrent(), baseQuery.getSize());
         System.out.println("userPage===================>" + userPage.getRecords());
         userMapper.pageList(userPage, baseQuery);

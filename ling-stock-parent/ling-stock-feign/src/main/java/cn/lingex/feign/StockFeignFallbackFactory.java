@@ -11,9 +11,9 @@ import feign.hystrix.FallbackFactory;
  * @version 1.0.0
  * @since 1.0.0
  */
-public class StockFeignFallbackFactory  implements FallbackFactory<StockFeign> {
+public class StockFeignFallbackFactory  implements FallbackFactory<IStockFeign> {
     @Override
-    public StockFeign create(Throwable throwable) {
+    public IStockFeign create(Throwable throwable) {
         return id -> JSONResult.getInstance(throwable.getMessage()).setCode(BusinessConstant.RESULT_FAILED_CODE).setStatus(BusinessConstant.RESULT_FAILED_STATUS);
     }
 }

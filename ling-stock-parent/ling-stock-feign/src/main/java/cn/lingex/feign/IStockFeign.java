@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @FeignClient(value = "stock-server",fallbackFactory = StockFeignFallbackFactory.class)
 @RequestMapping("/stock")
-public interface StockFeign {
+public interface IStockFeign {
 
     @GetMapping("/{id}")
     JSONResult<String> save(@PathVariable("id") Long id);
