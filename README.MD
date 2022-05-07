@@ -18,6 +18,7 @@
 2. 集成seata分布式事务解决(已完成)
 3. 基于knife4j的分布式接口文档(已完成)
 4. 基于SpringSecurity或Oauth2的权限管理(待完成)
+5. 基于redis使用redisson开源工具实现分布式锁(已完成)
 
 ## 目录结构
 

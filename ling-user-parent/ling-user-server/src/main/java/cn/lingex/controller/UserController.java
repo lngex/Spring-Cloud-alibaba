@@ -33,6 +33,9 @@ public class UserController {
     @ApiOperation("用户列表")
     public JSONResult<PageList<UserDto>> list(@RequestBody BaseQuery baseQuery, HttpServletRequest request){
         System.out.println(HttpHeaders.AUTHORIZATION +":"+request.getHeader(HttpHeaders.AUTHORIZATION));
+        System.out.println(request.getClass());
+        /* 505A0A5A728913E67A9B107DF1CD1456 */
+        System.out.println("session："+request.getSession().getId());
         System.out.println("token:"+request.getHeader("token"));
         return userService.pageList(baseQuery);
     }
