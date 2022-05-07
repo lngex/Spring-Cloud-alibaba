@@ -3,6 +3,7 @@ package cn.lingex.service.impl;
 import cn.lingex.basic.exception.BusinessException;
 import cn.lingex.basic.pojo.domain.User;
 import cn.lingex.basic.pojo.dto.OrderDto;
+import cn.lingex.basic.pojo.dto.UserDto;
 import cn.lingex.basic.pojo.query.BaseQuery;
 import cn.lingex.basic.result.JSONResult;
 import cn.lingex.basic.utils.PageList;
@@ -55,7 +56,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         if (user == null) {
             throw new BusinessException("用户不存在");
         }
-        if(user.getVip() > 0){
+        if (user.getVip() > 0) {
             throw new BusinessException("当前用户已经是Vip");
         }
         user.setVip(1).setUpdateTime(LocalDateTime.now());
@@ -68,7 +69,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
                 .setPayType(1);
         JSONResult<String> save = orderFeign.save(orderDto);
         JSONResult<String> save1 = stockFeign.save(1L);
-        if(!save.getStatus() || !save1.getStatus()){
+        if (!save.getStatus() || !save1.getStatus()) {
             throw new BusinessException(save.getData());
         }
         // int i = 1/0;
@@ -82,11 +83,13 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
      * @return 统一响应对象
      */
     @Override
-    public JSONResult<PageList<User>> pageList(BaseQuery baseQuery) {
-        Page<User> userPage = new Page<>(baseQuery.getCurrent(), baseQuery.getSize());
-        Page<User> userPage1 = userMapper.selectPage(userPage, null);
-        PageList<User> userPageList = new PageList<>();
-        PageList<User> userPageList1 = userPageList.setTotal(userPage1.getTotal()).setContent(userPage1.getRecords());
+    public JSONResult<PageList<UserDto>> pageList(BaseQuery baseQuery) {
+        Page<UserDto> userPage = new Page<>(baseQuery.getCurrent(), baseQuery.getSize());
+        System.out.println("userPage===================>" + userPage.getRecords());
+        userMapper.pageList(userPage, baseQuery);
+        System.out.println("userPage===================>" + userPage.getRecords());
+        PageList<UserDto> userPageList = new PageList<>();
+        PageList<UserDto> userPageList1 = userPageList.setTotal(userPage.getTotal()).setContent(userPage.getRecords());
         return JSONResult.getInstance(userPageList1);
     }
 }

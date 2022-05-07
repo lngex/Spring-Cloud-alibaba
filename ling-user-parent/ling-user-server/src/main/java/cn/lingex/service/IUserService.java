@@ -1,6 +1,7 @@
 package cn.lingex.service;
 
 import cn.lingex.basic.pojo.domain.User;
+import cn.lingex.basic.pojo.dto.UserDto;
 import cn.lingex.basic.pojo.query.BaseQuery;
 import cn.lingex.basic.result.JSONResult;
 import cn.lingex.basic.utils.PageList;
@@ -26,5 +27,5 @@ public interface IUserService extends IService<User> {
      * @param baseQuery 基础条件
      * @return 统一响应对象
      */
-    JSONResult<PageList<User>> pageList(BaseQuery baseQuery);
+    JSONResult<PageList<UserDto>> pageList(BaseQuery baseQuery);
 }

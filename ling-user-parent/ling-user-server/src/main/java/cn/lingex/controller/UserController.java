@@ -1,6 +1,7 @@
 package cn.lingex.controller;
 
 import cn.lingex.basic.pojo.domain.User;
+import cn.lingex.basic.pojo.dto.UserDto;
 import cn.lingex.basic.pojo.query.BaseQuery;
 import cn.lingex.basic.result.JSONResult;
 import cn.lingex.basic.utils.PageList;
@@ -30,7 +31,7 @@ public class UserController {
 
     @PostMapping
     @ApiOperation("用户列表")
-    public JSONResult<PageList<User>> list(@RequestBody BaseQuery baseQuery, HttpServletRequest request){
+    public JSONResult<PageList<UserDto>> list(@RequestBody BaseQuery baseQuery, HttpServletRequest request){
         System.out.println(HttpHeaders.AUTHORIZATION +":"+request.getHeader(HttpHeaders.AUTHORIZATION));
         System.out.println("token:"+request.getHeader("token"));
         return userService.pageList(baseQuery);

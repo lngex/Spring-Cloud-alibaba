@@ -25,4 +25,9 @@ public class BaseQuery {
      */
     @ApiModelProperty("每页展示记录")
     private Integer size = 10;
+    /**
+     * 模糊查询
+     */
+    @ApiModelProperty("模糊查询")
+    private String keyword;
 }
