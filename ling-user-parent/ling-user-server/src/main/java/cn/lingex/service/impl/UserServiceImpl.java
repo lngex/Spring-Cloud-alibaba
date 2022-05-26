@@ -12,23 +12,19 @@ import cn.lingex.feign.IOrderFeign;
 import cn.lingex.feign.IStockFeign;
 import cn.lingex.mapper.UserMapper;
 import cn.lingex.service.IUserService;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import io.seata.spring.annotation.GlobalTransactional;
-import org.checkerframework.checker.units.qual.A;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
-import org.redisson.client.RedisClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
- * 用户持久化层
+ * 用户业务层
  *
  * @author LiaoJianbo
  * @version 1.0.0
@@ -100,6 +96,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         System.out.println("userPage===================>" + userPage.getRecords());
         PageList<UserDto> userPageList = new PageList<>();
         PageList<UserDto> userPageList1 = userPageList.setTotal(userPage.getTotal()).setContent(userPage.getRecords());
+        System.out.println("是否释放锁：" + lock.forceUnlock());
+
         return JSONResult.getInstance(userPageList1);
     }
 }

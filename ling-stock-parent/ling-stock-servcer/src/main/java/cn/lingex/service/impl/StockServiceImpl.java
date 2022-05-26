@@ -25,12 +25,12 @@ public class StockServiceImpl extends ServiceImpl<StockMapper, Stock> implements
 
     @Override
     @Transactional
-    public JSONResult<String> save(Long id){
+    public JSONResult<String> save(Long id) {
         Stock stock = stockMapper.selectById(id);
         if (stock == null || stock.getNumber() <= 0) {
             throw new BusinessException("当前商品库存不足");
         }
-        stockMapper.updateById(stock.setNumber(stock.getNumber()-1));
+        stockMapper.updateById(stock.setNumber(stock.getNumber() - 1));
         return JSONResult.getInstance("操作成功");
     }
 }

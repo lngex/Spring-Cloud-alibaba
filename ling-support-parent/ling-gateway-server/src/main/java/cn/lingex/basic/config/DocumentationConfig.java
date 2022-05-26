@@ -11,8 +11,9 @@ import springfox.documentation.swagger.web.SwaggerResourcesProvider;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Configuration
-@Primary  //代表是Swagger主 配置
+@Primary //代表是Swagger主 配置
 public class DocumentationConfig implements SwaggerResourcesProvider {
 
     public static final String API_URI = "v2/api-docs";

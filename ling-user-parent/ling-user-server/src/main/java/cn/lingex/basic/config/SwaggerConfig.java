@@ -6,10 +6,6 @@ import org.springframework.http.HttpHeaders;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
-import springfox.documentation.builders.RequestParameterBuilder;
-import springfox.documentation.schema.Example;
-import springfox.documentation.schema.ModelFacets;
-import springfox.documentation.schema.ModelSpecification;
 import springfox.documentation.service.*;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spi.service.contexts.SecurityContext;
@@ -32,7 +28,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                //对外暴露服务的包,以controller的方式暴露,所以就是controller的包.
+                // 对外暴露服务的包,以controller的方式暴露,所以就是controller的包.
                 .apis(RequestHandlerSelectors.basePackage("cn.lingex.controller"))
                 .paths(PathSelectors.any())
                 .build().securityContexts(securityContexts())
