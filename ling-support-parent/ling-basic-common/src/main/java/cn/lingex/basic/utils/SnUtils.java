@@ -1,5 +1,10 @@
 package cn.lingex.basic.utils;
 
+import jodd.io.ZipUtil;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -87,11 +92,11 @@ public class SnUtils {
 
     /* ---------------------------------------------分割线------------------------------------------------ */
 
-    public static void main(String[] args) {
-        String s = getIncreaseIdByCurrentTimeMillis();
-        System.out.println("时间戳:" + s + ",长度:" + s.length());
-        String UUID = getRandomIdByUUID();
-        System.out.println("UUID:" + UUID + ",长度:" + UUID.length());
+    public static void main(String[] args) throws IOException {
+        File zip = ZipUtil.zip(new File("E:\\嗨创project\\测试文件夹"));
+        try(FileOutputStream fileOutputStream = new FileOutputStream(zip)){
+            fileOutputStream.flush();
+        }
     }
 
     /**

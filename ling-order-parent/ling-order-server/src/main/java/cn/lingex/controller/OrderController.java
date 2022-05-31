@@ -34,7 +34,9 @@ public class OrderController {
      */
     @PutMapping()
     @ApiOperation("订单新增")
-    public JSONResult<String> save(@RequestBody @Validated OrderDto orderDto) {
+    public JSONResult<String> save(@RequestBody @Validated OrderDto orderDto) throws InterruptedException {
+        Thread.sleep(30000);
+        System.out.println("延迟了30秒");
         return orderService.add(orderDto);
     }
 }

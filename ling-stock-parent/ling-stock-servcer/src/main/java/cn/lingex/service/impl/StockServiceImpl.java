@@ -31,6 +31,6 @@ public class StockServiceImpl extends ServiceImpl<StockMapper, Stock> implements
             throw new BusinessException("当前商品库存不足");
         }
         stockMapper.updateById(stock.setNumber(stock.getNumber() - 1));
-        return JSONResult.getInstance("操作成功");
+        return JSONResult.success("操作成功");
     }
 }

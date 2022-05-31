@@ -1,4 +1,4 @@
-package cn.lingex.basic.template;
+package cn.lingex.basic.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;

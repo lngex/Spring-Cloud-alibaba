@@ -1,7 +1,6 @@
 package cn.lingex.basic.exception;
 
 
-import cn.lingex.basic.BusinessConstant;
 import cn.lingex.basic.result.JSONResult;
 import feign.FeignException;
 import org.slf4j.Logger;
@@ -12,6 +11,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Collection;
 import java.util.HashMap;
@@ -37,7 +37,7 @@ public class GlobalException {
      * @return ResObject 统一返回对象
      */
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public JSONResult<String> captureMethodArgumentNotValidException(MethodArgumentNotValidException e, HttpServletResponse response) {
+    public JSONResult<String> captureMethodArgumentNotValidException(MethodArgumentNotValidException e, HttpServletRequest request, HttpServletResponse response) {
         // 获取所有的异常信息
         List<FieldError> errors = e.getBindingResult().getFieldErrors();
         // 使用map去重
@@ -51,9 +51,9 @@ public class GlobalException {
         for (String v : values) {
             message = v;
         }
-        logger.error(e.getMessage());
+        this.error(e, request);
         response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
-        return JSONResult.getInstance(message).setCode(BusinessConstant.RESULT_FAILED_CODE).setStatus(BusinessConstant.RESULT_FAILED_STATUS);
+        return JSONResult.failure(message);
     }
 
     /**
@@ -63,10 +63,10 @@ public class GlobalException {
      * @return ResObject 统一返回对象
      */
     @ExceptionHandler(BusinessException.class)
-    public JSONResult<String> captureBusinessException(BusinessException e, HttpServletResponse response) {
-        logger.error(e.getMessage());
+    public JSONResult<String> captureBusinessException(BusinessException e, HttpServletRequest request, HttpServletResponse response) {
+        this.error(e, request);
         response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
-        return JSONResult.getInstance(e.getMessage()).setCode(BusinessConstant.RESULT_FAILED_CODE).setStatus(BusinessConstant.RESULT_FAILED_STATUS);
+        return JSONResult.failure(e.getMessage());
     }
 
     /**
@@ -76,14 +76,14 @@ public class GlobalException {
      * @return ResObject 统一返回对象
      */
     @ExceptionHandler(FeignException.class)
-    public JSONResult<String> captureBusinessException(FeignException e, HttpServletResponse response) {
-        logger.error(e.getMessage());
+    public JSONResult<String> captureBusinessException(FeignException e, HttpServletRequest request, HttpServletResponse response) {
+        this.error(e, request);
         response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
         String[] split = e.getMessage().split(",\"data\":\"");
         if (split.length != 2) {
-            return JSONResult.getInstance("系统服务繁忙").setCode(BusinessConstant.RESULT_FAILED_CODE).setStatus(BusinessConstant.RESULT_FAILED_STATUS);
+            return JSONResult.failure("系统服务繁忙");
         } else {
-            return JSONResult.getInstance(split[1].substring(0, split[1].length() - 3)).setCode(BusinessConstant.RESULT_FAILED_CODE).setStatus(BusinessConstant.RESULT_FAILED_STATUS);
+            return JSONResult.failure(split[1].substring(0, split[1].length() - 3));
         }
     }
 
@@ -94,10 +94,10 @@ public class GlobalException {
      * @return ResObject 统一返回对象
      */
     @ExceptionHandler(RuntimeException.class)
-    public JSONResult<String> captureRuntimeException(Exception e, HttpServletResponse response) {
-        logger.error(e.getMessage(), e);
+    public JSONResult<String> captureRuntimeException(Exception e, HttpServletRequest request, HttpServletResponse response) {
+        this.error(e, request);
         response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
-        return JSONResult.getInstance("网络繁忙").setCode(BusinessConstant.RESULT_FAILED_CODE).setStatus(BusinessConstant.RESULT_FAILED_STATUS);
+        return JSONResult.failure("网络繁忙");
     }
 
     /**
@@ -107,9 +107,13 @@ public class GlobalException {
      * @return ResObject 统一返回对象
      */
     @ExceptionHandler(Exception.class)
-    public JSONResult<String> maxException(Exception e, HttpServletResponse response) {
-        logger.error(e.getMessage(), e);
+    public JSONResult<String> maxException(Exception e, HttpServletRequest request, HttpServletResponse response) {
+        this.error(e, request);
         response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
-        return JSONResult.getInstance("系统繁忙").setCode(BusinessConstant.RESULT_FAILED_CODE).setStatus(BusinessConstant.RESULT_FAILED_STATUS);
+        return JSONResult.failure("系统繁忙");
+    }
+
+    public void error(Exception e, HttpServletRequest request) {
+        logger.error("异常接口{},异常原因{}{}", request.getRequestURI(), e.getMessage(), e);
     }
 }

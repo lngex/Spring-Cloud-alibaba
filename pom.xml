@@ -13,6 +13,7 @@
         <module>ling-support-parent</module>
         <module>ling-order-parent</module>
         <module>ling-stock-parent</module>
+        <module>ling-auth-parent</module>
     </modules>
 
     <properties>

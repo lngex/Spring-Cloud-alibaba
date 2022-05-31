@@ -69,15 +69,22 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
                 .setSn(SnUtils.getRandomIdByUUID())
                 .setUserId(id)
                 .setPayType(1);
-        // 添加订单信息
-        JSONResult<String> save = orderFeign.save(orderDto);
+        long timeMillis = System.currentTimeMillis();
+        JSONResult<String> save = null;
+        try {
+            // 添加订单信息
+            save = orderFeign.save(orderDto);
+        } catch (Exception e) {
+            System.out.println(System.currentTimeMillis() - timeMillis);
+            throw new BusinessException(e.getMessage());
+        }
         // 减少库存
         JSONResult<String> save1 = stockFeign.save(1L);
-        if (!save.getStatus() || !save1.getStatus()) {
+        if (save.getCode() != 200 || save1.getCode() != 200) {
             throw new BusinessException(save.getData());
         }
         int i = 1 / 0;
-        return JSONResult.getInstance("操作成功");
+        return JSONResult.success("操作成功");
     }
 
     /**
@@ -98,6 +105,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         PageList<UserDto> userPageList1 = userPageList.setTotal(userPage.getTotal()).setContent(userPage.getRecords());
         System.out.println("是否释放锁：" + lock.forceUnlock());
 
-        return JSONResult.getInstance(userPageList1);
+        return JSONResult.success(userPageList1);
     }
 }

@@ -24,6 +24,14 @@
             <version>3.5.1</version>
         </dependency>
 
+        <!--Lombok引入-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+        </dependency>
+
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
@@ -64,13 +72,14 @@
         </dependency>
 
 
-        <!-- seata包 -->
+        <!--处理分布式事务 seata包 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
             <version>2.2.6.RELEASE</version>
         </dependency>
 
+        <!-- 解决Seata序列化LocalDataTime时出错 -->
         <dependency>
             <groupId>com.esotericsoftware</groupId>
             <artifactId>kryo</artifactId>

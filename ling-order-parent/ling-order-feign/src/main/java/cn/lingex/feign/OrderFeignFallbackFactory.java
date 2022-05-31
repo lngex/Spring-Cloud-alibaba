@@ -1,7 +1,8 @@
 package cn.lingex.feign;
 
-import cn.lingex.basic.BusinessConstant;
+import cn.lingex.basic.constant.BusinessConstant;
 import cn.lingex.basic.result.JSONResult;
+import cn.lingex.basic.result.ResultCodeEnum;
 import feign.hystrix.FallbackFactory;
 
 /**
@@ -16,6 +17,6 @@ import feign.hystrix.FallbackFactory;
 public class OrderFeignFallbackFactory implements FallbackFactory<IOrderFeign> {
     @Override
     public IOrderFeign create(Throwable throwable) {
-        return orderDto -> JSONResult.getInstance(throwable.getMessage()).setStatus(BusinessConstant.RESULT_FAILED_STATUS).setCode(BusinessConstant.RESULT_FAILED_CODE);
+        return orderDto -> JSONResult.failure(ResultCodeEnum.SERVICE_FAILURE.getCode(), throwable.getMessage());
     }
 }

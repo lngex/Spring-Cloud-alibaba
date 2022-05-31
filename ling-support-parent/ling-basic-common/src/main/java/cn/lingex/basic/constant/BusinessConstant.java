@@ -1,4 +1,4 @@
-package cn.lingex.basic;
+package cn.lingex.basic.constant;
 
 /**
  * 业务常量
@@ -24,4 +24,16 @@ public interface BusinessConstant {
      * 操作失败提示
      */
     boolean RESULT_FAILED_STATUS = false;
+    /**
+     * 客户端代码
+     */
+    String CLIENT_CODE = "clientCode";
+    /**
+     * 重复提交时间
+     */
+    String REPEAT_SUBMIT = "repeatSubmit";
+    /**
+     * 重复时间过期时间，单位秒
+     */
+    long REPEAT_SUBMIT_EXPIRATION_TIME = 2;
 }

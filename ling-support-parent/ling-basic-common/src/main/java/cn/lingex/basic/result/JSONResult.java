@@ -1,74 +1,72 @@
 package cn.lingex.basic.result;
 
-import cn.lingex.basic.BusinessConstant;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 
 /**
  * @Description: 返回Result
- * @Author LIAOJIANBO
+ * @Author SUHAO
  * @Date 2020-12-13
  */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Accessors(chain = true)
 @SuppressWarnings("all")
 public class JSONResult<T> implements Serializable {
 
-    private String code = BusinessConstant.RESULT_SUCCESS_CODE;
-    private Boolean status = BusinessConstant.RESULT_SUCCESS_STATUS;
+    private int code;
+    private String msg;
     private T data;
 
-    private JSONResult() {
-    }
-
-
-    private JSONResult(String code, Boolean msg, T data) {
+    public JSONResult(int code, String msg) {
         this.code = code;
-        this.status = msg;
-        this.data = data;
+        this.msg = msg;
     }
 
-    public static <T> JSONResult<T> getInstance(T t){
-        JSONResult<T> result = new JSONResult<>();
-        result.setData(t);
-        return result;
+    public static <T> JSONResult<T> success() {
+        return new JSONResult<T>(ResultCodeEnum.OK.getCode(), ResultCodeEnum.OK.getMessage());
     }
 
-    public String getCode() {
-        return code;
+    public static <T> JSONResult<T> success(T data) {
+        return new JSONResult<T>(ResultCodeEnum.OK.getCode(), ResultCodeEnum.OK.getMessage(), data);
     }
 
-    public JSONResult<T> setCode(String code) {
-        this.code = code;
-        return this;
+    public static <T> JSONResult<T> success(String msg, T data) {
+        return new JSONResult<T>(ResultCodeEnum.OK.getCode(), msg, data);
     }
 
-    public Boolean getStatus() {
-        return status;
+    public static <T> JSONResult<T> failure(int code, String msg) {
+        return new JSONResult<T>(code, msg);
     }
 
-    public JSONResult<T> setStatus(Boolean status) {
-        this.status = status;
-        return this;
+    public static <T> JSONResult<T> failure() {
+        return new JSONResult<T>(ResultCodeEnum.FAILURE.getCode(), ResultCodeEnum.FAILURE.getMessage());
     }
 
-    public T getData() {
-        return data;
+    public static <T> JSONResult<T> failure(String msg) {
+        return new JSONResult<T>(ResultCodeEnum.FAILURE.getCode(), msg);
     }
 
-    public JSONResult<T> setData(T data) {
-        this.data = data;
-        return this;
+    public static <T> JSONResult<T> failure(ResultCodeEnum codeEnum) {
+        return new JSONResult<T>(codeEnum.getCode(), codeEnum.getMessage());
     }
 
-    @Override
-    public String toString() {
-        return "JSONResult{" +
-                "code=" + code +
-                ", msg='" + status + '\'' +
-                ", data=" + data +
-                '}';
+    public static <T> JSONResult<T> error(ResultCodeEnum codeEnum) {
+        return new JSONResult<T>(codeEnum.getCode(), codeEnum.getMessage());
     }
 
-    public static void main(String[] args) {
-
+    public static <T> JSONResult<T> tokenExpire(String msg) {
+        return new JSONResult<T>(ResultCodeEnum.TOKEN_EXPIRE.getCode(), msg);
     }
+//    @Override
+//    public String toString() {
+//        return JSONObject.toJSONString(this, SerializerFeature.WriteEnumUsingToString);
+//    }
+//
+
 }

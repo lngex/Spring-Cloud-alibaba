@@ -39,6 +39,6 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         BeanUtils.copyProperties(orderDto,order);
         order.setId(SnowflakeUtil.getInstance().nextId()).setCreateTime(LocalDateTime.now()).setUpdateTime(LocalDateTime.now());
         orderMapper.insert(order);
-        return JSONResult.getInstance("操作成功");
+        return JSONResult.success("操作成功");
     }
 }
