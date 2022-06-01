@@ -3,7 +3,7 @@ package cn.lingex.basic.security.provider;
 
 import cn.lingex.basic.basePojo.LoginUserDto;
 import cn.lingex.basic.config.RedisService;
-import cn.lingex.basic.constant.BusinessConstant;
+import cn.lingex.basic.constant.AuthBusinessConstant;
 import cn.lingex.basic.security.token.UsernamePasswordCodeToken;
 import cn.lingex.service.impl.UserDetalServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,13 +61,13 @@ public class UsernamePasswordCodeProvider implements AuthenticationProvider {
             throw new UsernameNotFoundException("客户端编码不能为空");
         }
         // 校验验证码是否正确
-        String o = redisService.get(BusinessConstant.REDIS_VERIFICATION_CODE + clinetCode);
+/*        String o = redisService.get(AuthBusinessConstant.REDIS_VERIFICATION_CODE + clinetCode);
         if (!StringUtils.hasText(o)) {
             throw new UsernameNotFoundException("验证码已过期,请重新获取");
         }
         if (!o.equalsIgnoreCase(code)) {
             throw new UsernameNotFoundException("验证码错误");
-        }
+        }*/
         UserDetails userDetails = userDetalService.loadUserByUsername(username);
         boolean matches = passwordEncoder.matches(password, userDetails.getPassword());
         if (!matches) {

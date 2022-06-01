@@ -4,7 +4,7 @@ package cn.lingex.basic.security.handler;
 import cn.lingex.basic.basePojo.AuthenticationRedisValue;
 import cn.lingex.basic.basePojo.LoginUserDto;
 import cn.lingex.basic.config.RedisService;
-import cn.lingex.basic.constant.BusinessConstant;
+import cn.lingex.basic.constant.AuthBusinessConstant;
 import cn.lingex.basic.result.JSONResult;
 import cn.lingex.basic.security.authority.BusinessAuthority;
 import cn.lingex.basic.utils.StrUtils;
@@ -56,7 +56,7 @@ public class MySuccessHandler implements AuthenticationSuccessHandler {
         List<BusinessAuthority> authorities = (List<BusinessAuthority>) authentication.getAuthorities();
         // 封装到 authenticationRedisValue 储存到 redis 中
         authenticationRedisValue.setLoginUserDto(loginUserDto).setAuthorities(authorities);
-        redisService.set(BusinessConstant.LOGIN_INFO + uuid, authenticationRedisValue, BusinessConstant.TOKEN_EXPIRATION_TIME);
+        redisService.set(AuthBusinessConstant.LOGIN_INFO + uuid, authenticationRedisValue, AuthBusinessConstant.TOKEN_EXPIRATION_TIME);
         try (OutputStream outputStream = response.getOutputStream()) {
             // 写出用户登录信息
             outputStream.write(JSONObject.toJSONString(JSONResult.success(loginUserDto)).getBytes(StandardCharsets.UTF_8));

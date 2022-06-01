@@ -2,8 +2,8 @@ package cn.lingex.basic.security.handler;
 
 import cn.lingex.basic.result.JSONResult;
 import com.alibaba.fastjson.JSONObject;
-import org.apache.http.HttpStatus;
-import org.apache.http.entity.ContentType;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
@@ -43,8 +43,8 @@ public class MyAuthenticationEntryPoint implements AuthenticationEntryPoint {
      */
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
-        response.setContentType(ContentType.APPLICATION_JSON.getMimeType());
-        response.setStatus(HttpStatus.SC_UNAUTHORIZED);
+        response.setContentType(MediaType.APPLICATION_JSON_VALUE);
+        response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
         try (ServletOutputStream outputStream = response.getOutputStream()) {
             outputStream.write(JSONObject.toJSONString(JSONResult.failure("当前处于游客模式，无法访问该资源").setCode(401)).getBytes(StandardCharsets.UTF_8));
         }

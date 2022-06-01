@@ -3,7 +3,7 @@ package cn.lingex.basic.filter;
 
 import cn.lingex.basic.basePojo.AuthenticationRedisValue;
 import cn.lingex.basic.config.RedisService;
-import cn.lingex.basic.constant.BusinessConstant;
+import cn.lingex.basic.constant.AuthBusinessConstant;
 import cn.lingex.basic.security.token.BaseAuthenticationToken;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.google.common.net.HttpHeaders;
@@ -44,12 +44,12 @@ public class TokenFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String attribute = request.getHeader(HttpHeaders.AUTHORIZATION);
         if (StringUtils.isNotEmpty(attribute)) {
-            AuthenticationRedisValue o = redisService.get(BusinessConstant.LOGIN_INFO + attribute);
+            AuthenticationRedisValue o = redisService.get(AuthBusinessConstant.LOGIN_INFO + attribute);
             if (o != null) {
                 long expire = redisService.getExpire(attribute);
                 if (expire < 60 * 10) {
                     // TOKEN过期时间续期
-                    redisService.set(attribute, o, BusinessConstant.TOKEN_EXPIRATION_TIME);
+                    redisService.set(attribute, o, AuthBusinessConstant.TOKEN_EXPIRATION_TIME);
                 }
                 BaseAuthenticationToken clientCode = new BaseAuthenticationToken(o.getLoginUserDto().getUsername(), null, request.getHeader("clientCode"), o.getAuthorities());
                 clientCode.setDetails(o.getLoginUserDto());

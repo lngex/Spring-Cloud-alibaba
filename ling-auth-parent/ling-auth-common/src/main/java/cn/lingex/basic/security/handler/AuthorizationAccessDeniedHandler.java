@@ -2,8 +2,8 @@ package cn.lingex.basic.security.handler;
 
 import cn.lingex.basic.result.JSONResult;
 import com.alibaba.fastjson.JSONObject;
-import org.apache.http.HttpStatus;
-import org.apache.http.entity.ContentType;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.stereotype.Component;
@@ -36,8 +36,8 @@ public class AuthorizationAccessDeniedHandler implements AccessDeniedHandler {
      */
     @Override
     public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException) throws IOException, ServletException {
-        response.setContentType(ContentType.APPLICATION_JSON.getMimeType());
-        response.setStatus(HttpStatus.SC_UNAUTHORIZED);
+        response.setContentType(MediaType.APPLICATION_JSON_VALUE);
+        response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
         try (ServletOutputStream outputStream = response.getOutputStream()) {
             outputStream.write(JSONObject.toJSONString(JSONResult.failure("你没有访问权限")).getBytes(StandardCharsets.UTF_8));
         }

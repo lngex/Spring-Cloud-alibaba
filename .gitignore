@@ -1,4 +1,5 @@
 .idea
+logs
 ling-support-parent/ling-basic-common/target
 ling-support-parent/ling-gateway-server/target
 ling-order-parent/ling-order-common/target

@@ -1,7 +1,7 @@
 package cn.lingex.basic.filter;
 
 
-import cn.lingex.basic.constant.BusinessConstant;
+import cn.lingex.basic.constant.AuthBusinessConstant;
 import cn.lingex.basic.security.token.UsernamePasswordCodeToken;
 import cn.lingex.basic.utils.Example;
 import com.alibaba.fastjson.JSONObject;
@@ -78,7 +78,7 @@ public class UsernamePasswordCodeAuthenticationFilter extends AbstractAuthentica
                 jsonObject.getString(usernameParameter),
                 jsonObject.getString(passwordParameter),
                 jsonObject.getString(codeParameter),
-                request.getHeader(BusinessConstant.CLIENT_CODE)
+                request.getHeader(AuthBusinessConstant.CLIENT_CODE)
         );
         // Allow subclasses to set the "details" property
         setDetails(request, authRequest);
