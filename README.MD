@@ -17,7 +17,7 @@
 1. 集成网关，NACOS注册中心与配置中心(已完成)
 2. 集成seata分布式事务解决(已完成)
 3. 基于knife4j的分布式接口文档(已完成)
-4. 基于SpringSecurity或Oauth2的权限管理(待完成.......)
+4. 基于SpringSecurity权限管理(已完成)
 5. 基于redis使用redisson开源工具实现分布式锁(已完成)
 
 ## 目录结构
@@ -45,6 +45,19 @@
          server----------------------------主要服务
          |
          feign-----------------------------用于其他服务调用的接口
+
+### 权限服务使用
+####第一步 
+    引入ling-auth-common依赖
+####第二步
+    创建Security配置类继承WebSecurityCommonConfig
+####第三步
+    开启@EnableWebSecurity；设置优先级@Order(90)，value值越小优先级越高，默认100
+####第四步
+    重写configure方法，首先写入super.configure(http);(父级configure方法做了授权是失败处理、跨域配置、全局放行配置，若需要自己定义可无需写入)
+####第五步
+    根据权限配置选择验证策略
+    
 
     
     
