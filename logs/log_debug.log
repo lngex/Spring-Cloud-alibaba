@@ -94,3 +94,5 @@
                 Filter 'tokenFilter' configured for use
 2022-06-02 15:10:30.487 DEBUG 7279  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
                 Filter 'tokenFilter' configured for use
+2022-06-02 15:12:12.941 DEBUG 5472  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use

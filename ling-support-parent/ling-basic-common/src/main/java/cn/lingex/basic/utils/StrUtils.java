@@ -142,11 +142,6 @@ public class StrUtils {
 
 
     public static void main(String[] args) throws InterruptedException {
-        String url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=%s&secret=%s";
-        RestTemplate restTemplate = new RestTemplate();
-        String appid = "wx45066fdd4523d173";
-        String secret = "d33ef4d27b23a603ec09c00eda103f46";
-        Object forObject = restTemplate.getForObject(String.format(url, appid, secret), Object.class);
-        System.out.println(forObject);
+
     }
 }

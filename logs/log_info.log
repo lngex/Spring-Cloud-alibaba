@@ -4311,3 +4311,144 @@ Using generated security password: 5818f30a-b8c1-4d4d-9d85-3e3646578821
                 register TM success. client version:1.3.0, server version:1.3.0,channel:[id: 0x471d5329, L:/192.168.31.157:10350 - R:/192.168.31.157:8091]
 2022-06-02 15:11:27.796  INFO 64588 --- [eoutChecker_1_1] io.seata.core.rpc.netty.NettyPoolableFactory:81                    :
                 register success, cost 3 ms, version:1.3.0,role:TMROLE,channel:[id: 0x471d5329, L:/192.168.31.157:10350 - R:/192.168.31.157:8091]
+2022-06-02 15:12:09.453  INFO 1984  --- [           main] o.s.c.bootstrap.config.PropertySourceBootstrapConfiguration:112    :
+                Located property source: [BootstrapPropertySource {name='bootstrapProperties-user-server-dev.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-user-server.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-user-server,DEFAULT_GROUP'}]
+2022-06-02 15:12:09.456  INFO 1987  --- [           main] cn.lingex.UserApp:655                                              :
+                The following profiles are active: dev
+2022-06-02 15:12:10.455  INFO 2986  --- [           main] o.s.data.repository.config.RepositoryConfigurationDelegate:249     :
+                Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-02 15:12:10.457  INFO 2988  --- [           main] o.s.data.repository.config.RepositoryConfigurationDelegate:127     :
+                Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-02 15:12:10.487  INFO 3018  --- [           main] o.s.data.repository.config.RepositoryConfigurationDelegate:187     :
+                Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2022-06-02 15:12:10.779  INFO 3310  --- [           main] org.springframework.cloud.context.scope.GenericScope:295           :
+                BeanFactory id=54a8e68b-dac9-3383-a46e-f26bb27192d3
+2022-06-02 15:12:10.815  INFO 3346  --- [           main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 :
+                Bean 'cn.lingex.feign.IOrderFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-02 15:12:10.816  INFO 3347  --- [           main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 :
+                Bean 'cn.lingex.feign.IStockFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-02 15:12:10.828  INFO 3359  --- [           main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 :
+                Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration$$EnhancerBySpringCGLIB$$9f9bfc3f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-02 15:12:10.836  INFO 3367  --- [           main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 :
+                Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-02 15:12:10.859  INFO 3390  --- [           main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 :
+                Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-02 15:12:10.865  INFO 3396  --- [           main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 :
+                Bean 'spring.cloud.alibaba.seata-io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-02 15:12:10.866  INFO 3397  --- [           main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 :
+                Bean 'seata-io.seata.spring.boot.autoconfigure.properties.SeataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-02 15:12:10.867  INFO 3398  --- [           main] io.seata.spring.boot.autoconfigure.SeataAutoConfiguration:65       :
+                Automatically configure Seata
+2022-06-02 15:12:10.897  INFO 3428  --- [           main] io.seata.config.ConfigurationFactory:65                            :
+                load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
+2022-06-02 15:12:10.902  INFO 3433  --- [           main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 :
+                Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-02 15:12:10.910  INFO 3441  --- [           main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 :
+                Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-02 15:12:11.023  INFO 3554  --- [           main] io.seata.spring.annotation.GlobalTransactionScanner:164            :
+                Initializing Global Transaction Clients ... 
+2022-06-02 15:12:11.106  INFO 3637  --- [           main] io.seata.core.rpc.netty.NettyClientBootstrap:147                   :
+                NettyClientBootstrap has started
+2022-06-02 15:12:11.106  INFO 3637  --- [           main] io.seata.spring.annotation.GlobalTransactionScanner:172            :
+                Transaction Manager Client is initialized. applicationId[user-server] txServiceGroup[my_tx_group]
+2022-06-02 15:12:11.114  INFO 3645  --- [           main] io.seata.rm.datasource.AsyncWorker:125                             :
+                Async Commit Buffer Limit: 10000
+2022-06-02 15:12:11.115  INFO 3646  --- [           main] io.seata.rm.datasource.xa.ResourceManagerXA:40                     :
+                ResourceManagerXA init ...
+2022-06-02 15:12:11.120  INFO 3651  --- [           main] io.seata.core.rpc.netty.NettyClientBootstrap:147                   :
+                NettyClientBootstrap has started
+2022-06-02 15:12:11.120  INFO 3651  --- [           main] io.seata.spring.annotation.GlobalTransactionScanner:177            :
+                Resource Manager is initialized. applicationId[user-server] txServiceGroup[my_tx_group]
+2022-06-02 15:12:11.120  INFO 3651  --- [           main] io.seata.spring.annotation.GlobalTransactionScanner:181            :
+                Global Transaction Clients are initialized. 
+2022-06-02 15:12:11.311  INFO 3842  --- [           main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 :
+                Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6cdee57' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-02 15:12:11.315  INFO 3846  --- [           main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 :
+                Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-02 15:12:11.325  INFO 3856  --- [           main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 :
+                Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-02 15:12:11.328  INFO 3859  --- [           main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 :
+                Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-02 15:12:11.342  INFO 3873  --- [           main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 :
+                Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-02 15:12:11.344  INFO 3875  --- [           main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 :
+                Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-02 15:12:11.346  INFO 3877  --- [           main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 :
+                Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-02 15:12:11.556  INFO 4087  --- [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108   :
+                Tomcat initialized with port(s): 20100 (http)
+2022-06-02 15:12:11.563  INFO 4094  --- [           main] org.apache.coyote.http11.Http11NioProtocol:173                     :
+                Initializing ProtocolHandler ["http-nio-20100"]
+2022-06-02 15:12:11.563  INFO 4094  --- [           main] org.apache.catalina.core.StandardService:173                       :
+                Starting service [Tomcat]
+2022-06-02 15:12:11.564  INFO 4095  --- [           main] org.apache.catalina.core.StandardEngine:173                        :
+                Starting Servlet engine: [Apache Tomcat/9.0.37]
+2022-06-02 15:12:11.663  INFO 4194  --- [           main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173       :
+                Initializing Spring embedded WebApplicationContext
+2022-06-02 15:12:11.663  INFO 4194  --- [           main] o.s.b.web.servlet.context.ServletWebServerApplicationContext:285   :
+                Root WebApplicationContext: initialization completed in 2187 ms
+2022-06-02 15:12:12.092  INFO 4623  --- [           main] org.redisson.Version:41                                            :
+                Redisson 3.11.1
+2022-06-02 15:12:12.774  INFO 5305  --- [isson-netty-2-4] org.redisson.connection.pool.MasterPubSubConnectionPool:168        :
+                1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-06-02 15:12:12.779  INFO 5310  --- [sson-netty-2-19] org.redisson.connection.pool.MasterConnectionPool:168              :
+                24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-06-02 15:12:13.122  INFO 5653  --- [           main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure:56    :
+                Init DruidDataSource
+2022-06-02 15:12:13.206  INFO 5737  --- [           main] com.alibaba.druid.pool.DruidDataSource:998                         :
+                {dataSource-1} inited
+2022-06-02 15:12:13.234  INFO 5765  --- [           main] i.s.s.annotation.datasource.SeataAutoDataSourceProxyCreator:45     :
+                Auto proxy of [dataSource]
+2022-06-02 15:12:14.352  INFO 6883  --- [           main] io.seata.spring.annotation.GlobalTransactionScanner:231            :
+                Bean[cn.lingex.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$f1b2d91c] with name [userServiceImpl] would use interceptor [io.seata.spring.annotation.GlobalTransactionalInterceptor]
+2022-06-02 15:12:15.391  INFO 7922  --- [           main] io.seata.core.rpc.netty.NettyClientChannelManager:99               :
+                will connect to 192.168.31.157:8091
+2022-06-02 15:12:15.391  INFO 7922  --- [           main] io.seata.core.rpc.netty.RmNettyRemotingClient:244                  :
+                RM will register :jdbc:mysql://localhost:3306/ling_user
+2022-06-02 15:12:15.394  INFO 7925  --- [           main] io.seata.core.rpc.netty.NettyPoolableFactory:56                    :
+                NettyPool create channel to transactionRole:RMROLE,address:192.168.31.157:8091,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://localhost:3306/ling_user', applicationId='user-server', transactionServiceGroup='my_tx_group'} >
+2022-06-02 15:12:15.437  INFO 7968  --- [           main] io.seata.core.rpc.netty.RmNettyRemotingClient:151                  :
+                register RM success. client version:1.3.0, server version:1.3.0,channel:[id: 0xf6efa3f2, L:/192.168.31.157:10468 - R:/192.168.31.157:8091]
+2022-06-02 15:12:15.443  INFO 7974  --- [           main] io.seata.core.rpc.netty.NettyPoolableFactory:81                    :
+                register success, cost 44 ms, version:1.3.0,role:RMROLE,channel:[id: 0xf6efa3f2, L:/192.168.31.157:10468 - R:/192.168.31.157:8091]
+2022-06-02 15:12:15.810  INFO 8341  --- [           main] o.s.boot.actuate.endpoint.web.EndpointLinksResolver:58             :
+                Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-06-02 15:12:15.934  INFO 8465  --- [           main] o.s.b.a.security.servlet.UserDetailsServiceAutoConfiguration:86    :
+                
+
+Using generated security password: dfd959b3-efda-4266-9e0b-07d414144a3a
+
+2022-06-02 15:12:16.029  INFO 8560  --- [           main] org.springframework.security.web.DefaultSecurityFilterChain:43     :
+                Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5516ee5, org.springframework.security.web.context.SecurityContextPersistenceFilter@121dac1a, org.springframework.security.web.header.HeaderWriterFilter@61e0f9b9, org.springframework.web.filter.CorsFilter@6765b6a2, org.springframework.security.web.authentication.logout.LogoutFilter@314c6f89, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2b4954a4, cn.lingex.basic.filter.TokenFilter@2a9e754e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@23dc70c1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d3990a5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75c589f2, org.springframework.security.web.session.SessionManagementFilter@4a86be01, org.springframework.security.web.access.ExceptionTranslationFilter@2de96eba, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@630c3af3]
+2022-06-02 15:12:16.032  INFO 8563  --- [           main] org.springframework.security.web.DefaultSecurityFilterChain:43     :
+                Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53564a4c, org.springframework.security.web.context.SecurityContextPersistenceFilter@416c1b0, org.springframework.security.web.header.HeaderWriterFilter@5c215642, org.springframework.web.filter.CorsFilter@4866e0a7, org.springframework.security.web.authentication.logout.LogoutFilter@7c8f803d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@318511f0, cn.lingex.basic.filter.TokenFilter@2a9e754e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@363ba634, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60fe75f7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69a294d8, org.springframework.security.web.session.SessionManagementFilter@1317ac2c, org.springframework.security.web.access.ExceptionTranslationFilter@565c887e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17e6d07b]
+2022-06-02 15:12:16.061  INFO 8592  --- [           main] com.netflix.config.sources.URLConfigurationSource:122              :
+                To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-06-02 15:12:16.065  INFO 8596  --- [           main] com.netflix.config.sources.URLConfigurationSource:122              :
+                To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-06-02 15:12:16.213  INFO 8744  --- [           main] o.s.scheduling.concurrent.ThreadPoolTaskExecutor:181               :
+                Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-02 15:12:16.309  INFO 8840  --- [           main] o.s.scheduling.concurrent.ThreadPoolTaskScheduler:181              :
+                Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-06-02 15:12:17.275  INFO 9806  --- [           main] org.apache.coyote.http11.Http11NioProtocol:173                     :
+                Starting ProtocolHandler ["http-nio-20100"]
+2022-06-02 15:12:17.289  INFO 9820  --- [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220   :
+                Tomcat started on port(s): 20100 (http) with context path ''
+2022-06-02 15:12:17.558  INFO 10089 --- [           main] com.alibaba.cloud.nacos.registry.NacosServiceRegistry:75           :
+                nacos registry, DEFAULT_GROUP user-server 192.168.31.157:20100 register finished
+2022-06-02 15:12:17.971  INFO 10502 --- [           main] cn.lingex.UserApp:61                                               :
+                Started UserApp in 10.249 seconds (JVM running for 11.176)
+2022-06-02 15:12:18.686  INFO 11217 --- [-192.168.31.157] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173       :
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-02 15:12:18.687  INFO 11218 --- [-192.168.31.157] org.springframework.web.servlet.DispatcherServlet:525              :
+                Initializing Servlet 'dispatcherServlet'
+2022-06-02 15:12:18.694  INFO 11225 --- [-192.168.31.157] org.springframework.web.servlet.DispatcherServlet:547              :
+                Completed initialization in 7 ms
+2022-06-02 15:13:11.106  INFO 63637 --- [eoutChecker_1_1] io.seata.core.rpc.netty.NettyClientChannelManager:99               :
+                will connect to 192.168.31.157:8091
+2022-06-02 15:13:11.107  INFO 63638 --- [eoutChecker_1_1] io.seata.core.rpc.netty.NettyPoolableFactory:56                    :
+                NettyPool create channel to transactionRole:TMROLE,address:192.168.31.157:8091,msg:< RegisterTMRequest{applicationId='user-server', transactionServiceGroup='my_tx_group'} >
+2022-06-02 15:13:11.112  INFO 63643 --- [eoutChecker_1_1] io.seata.core.rpc.netty.TmNettyRemotingClient:138                  :
+                register TM success. client version:1.3.0, server version:1.3.0,channel:[id: 0xb504f499, L:/192.168.31.157:10533 - R:/192.168.31.157:8091]
+2022-06-02 15:13:11.112  INFO 63643 --- [eoutChecker_1_1] io.seata.core.rpc.netty.NettyPoolableFactory:81                    :
+                register success, cost 3 ms, version:1.3.0,role:TMROLE,channel:[id: 0xb504f499, L:/192.168.31.157:10533 - R:/192.168.31.157:8091]
