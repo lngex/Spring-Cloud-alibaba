@@ -61,7 +61,7 @@ public class JSONResult<T> implements Serializable {
     }
 
     public static <T> JSONResult<T> tokenExpire(String msg) {
-        return new JSONResult<T>(ResultCodeEnum.TOKEN_EXPIRE.getCode(), msg);
+        return new JSONResult<T>(ResultCodeEnum.TOKEN_INVALID.getCode(), msg);
     }
 //    @Override
 //    public String toString() {

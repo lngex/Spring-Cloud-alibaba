@@ -1,259 +1,92 @@
-2022-06-01 11:08:12.252 DEBUG 9557  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+2022-06-02 09:21:11.532 DEBUG 13322 --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
                 Filter 'tokenFilter' configured for use
-2022-06-01 11:08:12.254 DEBUG 9559  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
+2022-06-02 09:21:11.533 DEBUG 13323 --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
                 Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
-2022-06-01 11:09:08.379 DEBUG 5216  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+2022-06-02 09:21:45.824 DEBUG 5842  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
                 Filter 'tokenFilter' configured for use
-2022-06-01 11:09:08.379 DEBUG 5216  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
-                Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
-2022-06-01 11:09:53.654 DEBUG 5074  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
-                Filter 'tokenFilter' configured for use
-2022-06-01 11:09:53.654 DEBUG 5074  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
-                Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
-2022-06-01 11:20:00.965 DEBUG 5530  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
-                Filter 'tokenFilter' configured for use
-2022-06-01 11:20:00.966 DEBUG 5531  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
-                Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
-2022-06-01 11:21:49.096 DEBUG 5906  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
-                Filter 'tokenFilter' configured for use
-2022-06-01 11:21:49.096 DEBUG 5906  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
-                Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
-2022-06-01 11:30:18.386 DEBUG 5256  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
-                Filter 'tokenFilter' configured for use
-2022-06-01 11:30:18.386 DEBUG 5256  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
-                Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
-2022-06-01 11:32:11.789 DEBUG 5239  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
-                Filter 'tokenFilter' configured for use
-2022-06-01 11:32:11.789 DEBUG 5239  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
-                Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
-2022-06-01 11:32:34.957 DEBUG 28407 --- [io-20600-exec-1] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:206      :
+2022-06-02 09:22:57.766 DEBUG 119556 --- [io-20600-exec-1] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:206      :
                 Request is to process authentication
-2022-06-01 11:32:35.023 DEBUG 28473 --- [io-20600-exec-1] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:345      :
-                Authentication request failed: org.springframework.security.core.userdetails.UsernameNotFoundException: 客户端编码不能为空
-org.springframework.security.core.userdetails.UsernameNotFoundException: 客户端编码不能为空
-	at cn.lingex.basic.security.provider.UsernamePasswordCodeProvider.authenticate(UsernamePasswordCodeProvider.java:61)
-	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199)
-	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:219)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:523)
-	at cn.lingex.basic.filter.UsernamePasswordCodeAuthenticationFilter.attemptAuthentication(UsernamePasswordCodeAuthenticationFilter.java:85)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at cn.lingex.basic.filter.TokenFilter.doFilterInternal(TokenFilter.java:59)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2022-06-01 11:32:35.024 DEBUG 28474 --- [io-20600-exec-1] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:346      :
-                Updated SecurityContextHolder to contain null Authentication
-2022-06-01 11:32:35.024 DEBUG 28474 --- [io-20600-exec-1] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:347      :
-                Delegating to authentication failure handler cn.lingex.basic.security.handler.MyAuthenticationFailureHandler@6973f1ae
-2022-06-01 11:33:24.306 DEBUG 77756 --- [io-20600-exec-2] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:206      :
-                Request is to process authentication
-2022-06-01 11:33:24.306 DEBUG 77756 --- [io-20600-exec-2] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:345      :
-                Authentication request failed: org.springframework.security.core.userdetails.UsernameNotFoundException: 客户端编码不能为空
-org.springframework.security.core.userdetails.UsernameNotFoundException: 客户端编码不能为空
-	at cn.lingex.basic.security.provider.UsernamePasswordCodeProvider.authenticate(UsernamePasswordCodeProvider.java:61)
-	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199)
-	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:219)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:513)
-	at cn.lingex.basic.filter.UsernamePasswordCodeAuthenticationFilter.attemptAuthentication(UsernamePasswordCodeAuthenticationFilter.java:85)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at cn.lingex.basic.filter.TokenFilter.doFilterInternal(TokenFilter.java:59)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2022-06-01 11:33:24.307 DEBUG 77757 --- [io-20600-exec-2] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:346      :
-                Updated SecurityContextHolder to contain null Authentication
-2022-06-01 11:33:24.307 DEBUG 77757 --- [io-20600-exec-2] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:347      :
-                Delegating to authentication failure handler cn.lingex.basic.security.handler.MyAuthenticationFailureHandler@6973f1ae
-2022-06-01 11:33:32.378 DEBUG 85828 --- [io-20600-exec-3] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:206      :
-                Request is to process authentication
-2022-06-01 11:33:32.380 DEBUG 85830 --- [io-20600-exec-3] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:345      :
-                Authentication request failed: org.springframework.security.core.userdetails.UsernameNotFoundException: 客户端编码不能为空
-org.springframework.security.core.userdetails.UsernameNotFoundException: 客户端编码不能为空
-	at cn.lingex.basic.security.provider.UsernamePasswordCodeProvider.authenticate(UsernamePasswordCodeProvider.java:61)
-	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199)
-	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:219)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:513)
-	at cn.lingex.basic.filter.UsernamePasswordCodeAuthenticationFilter.attemptAuthentication(UsernamePasswordCodeAuthenticationFilter.java:85)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at cn.lingex.basic.filter.TokenFilter.doFilterInternal(TokenFilter.java:59)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2022-06-01 11:33:32.381 DEBUG 85831 --- [io-20600-exec-3] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:346      :
-                Updated SecurityContextHolder to contain null Authentication
-2022-06-01 11:33:32.381 DEBUG 85831 --- [io-20600-exec-3] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:347      :
-                Delegating to authentication failure handler cn.lingex.basic.security.handler.MyAuthenticationFailureHandler@6973f1ae
-2022-06-01 11:34:16.461 DEBUG 129911 --- [io-20600-exec-4] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:206      :
-                Request is to process authentication
-2022-06-01 11:34:16.549 DEBUG 129999 --- [io-20600-exec-4] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:312      :
-                Authentication success. Updating SecurityContextHolder to contain: cn.lingex.basic.security.token.UsernamePasswordCodeToken@e3fdb14d: Principal: user; Credentials: [PROTECTED]; Authenticated: true; Details: LoginUserDto(id=null, username=null, header=null, sex=null, city=null, phone=null, token=null); Granted Authorities: BusinessAuthority{role='Role_test:test'}
-2022-06-01 11:36:04.718 DEBUG 5336  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+2022-06-02 09:22:58.114 DEBUG 119904 --- [io-20600-exec-1] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:312      :
+                Authentication success. Updating SecurityContextHolder to contain: cn.lingex.basic.security.token.UsernamePasswordCodeToken@11688db: Principal: user; Credentials: [PROTECTED]; Authenticated: true; Details: LoginUserDto(id=null, username=null, header=null, sex=null, city=null, phone=null, token=null); Granted Authorities: BusinessAuthority{role='Role_test:test'}, BusinessAuthority{role='Role_user:vip'}
+2022-06-02 09:32:18.983 DEBUG 5894  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
                 Filter 'tokenFilter' configured for use
-2022-06-01 11:36:04.718 DEBUG 5336  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
-                Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
-2022-06-01 11:43:35.105 DEBUG 5384  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+2022-06-02 09:37:09.308 DEBUG 6060  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
                 Filter 'tokenFilter' configured for use
-2022-06-01 11:43:35.106 DEBUG 5385  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
+2022-06-02 09:51:17.814 DEBUG 5914  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 09:51:54.402 DEBUG 5898  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 09:52:53.777 DEBUG 5436  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 09:55:11.842 DEBUG 5600  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 09:57:30.692 DEBUG 5592  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 09:57:30.692 DEBUG 5592  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
                 Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
+2022-06-02 09:57:44.098 DEBUG 5565  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 09:58:25.159 DEBUG 5398  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 10:55:57.308 DEBUG 6826  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 10:55:57.309 DEBUG 6827  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
+                Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
+2022-06-02 10:56:17.009 DEBUG 5468  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 10:58:27.495 DEBUG 5585  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 11:10:52.903 DEBUG 5481  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 11:11:14.642 DEBUG 5306  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 11:11:14.643 DEBUG 5307  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
+                Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
+2022-06-02 11:11:51.734 DEBUG 42398 --- [io-20600-exec-1] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:206      :
+                Request is to process authentication
+2022-06-02 11:11:51.826 DEBUG 42490 --- [io-20600-exec-1] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:312      :
+                Authentication success. Updating SecurityContextHolder to contain: cn.lingex.basic.security.token.UsernamePasswordCodeToken@13ef8540: Principal: user; Credentials: [PROTECTED]; Authenticated: true; Details: LoginUserDto(id=null, username=null, header=null, sex=null, city=null, phone=null, token=null); Granted Authorities: BusinessAuthority{role='Role_test:test'}, BusinessAuthority{role='user:vip'}
+2022-06-02 11:13:44.459 DEBUG 5482  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 11:13:44.459 DEBUG 5482  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
+                Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
+2022-06-02 11:14:04.013 DEBUG 25036 --- [io-20600-exec-1] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:206      :
+                Request is to process authentication
+2022-06-02 11:14:04.098 DEBUG 25121 --- [io-20600-exec-1] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:312      :
+                Authentication success. Updating SecurityContextHolder to contain: cn.lingex.basic.security.token.UsernamePasswordCodeToken@bb97d1e9: Principal: user; Credentials: [PROTECTED]; Authenticated: true; Details: LoginUserDto(id=null, username=null, header=null, sex=null, city=null, phone=null, token=null); Granted Authorities: BusinessAuthority{role='test:test'}, BusinessAuthority{role='user:vip'}
+2022-06-02 11:15:42.418 DEBUG 5306  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 11:15:42.418 DEBUG 5306  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
+                Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
+2022-06-02 11:17:57.859 DEBUG 5488  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 11:17:57.859 DEBUG 5488  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
+                Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
+2022-06-02 11:18:46.837 DEBUG 5543  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 11:18:46.837 DEBUG 5543  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
+                Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
+2022-06-02 11:22:27.093 DEBUG 5668  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 11:22:27.094 DEBUG 5669  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
+                Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
+2022-06-02 11:31:19.065 DEBUG 5508  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 11:31:19.065 DEBUG 5508  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
+                Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
+2022-06-02 11:32:58.707 DEBUG 6382  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 11:32:58.708 DEBUG 6383  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
+                Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
+2022-06-02 11:33:06.756 DEBUG 6670  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 11:37:37.315 DEBUG 6941  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 11:37:37.315 DEBUG 6941  --- [           main] c.l.basic.filter.UsernamePasswordCodeAuthenticationFilter:242      :
+                Filter 'usernamePasswordCodeAuthenticationFilter' configured for use
+2022-06-02 11:37:41.205 DEBUG 6564  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 14:14:24.804 DEBUG 7175  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use
+2022-06-02 14:21:55.350 DEBUG 7177  --- [           main] cn.lingex.basic.filter.TokenFilter:242                             :
+                Filter 'tokenFilter' configured for use

@@ -1,6 +1,5 @@
 package cn.lingex.basic.pojo.dto;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 import lombok.experimental.Accessors;
 

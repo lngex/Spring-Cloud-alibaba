@@ -46,16 +46,18 @@
          |
          feign-----------------------------用于其他服务调用的接口
 
-### 权限服务使用
+## 权限服务使用
 第一步 引入ling-auth-common依赖
 
 第二步 创建Security配置类继承WebSecurityCommonConfig
 
-第三步 开启@EnableWebSecurity；设置优先级@Order(90)，value值越小优先级越高，默认100
+第三步 开启@EnableWebSecurity；设置优先级@Order(90)，value值越小优先级越高，默认100,@EnableGlobalMethodSecurity(prePostEnabled = true)开启权限校验
 
 第四步 重写configure方法，首先写入super.configure(http);(父级configure方法做了授权是失败处理、跨域配置、全局放行配置，若需要自己定义可无需写入)
 
 第五步 根据权限配置选择验证策略
+## 接口地址
+    网关接口地址/doc.html
     
 
     

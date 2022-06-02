@@ -1,6 +1,5 @@
 package cn.lingex.controller;
 
-import cn.lingex.basic.pojo.domain.User;
 import cn.lingex.basic.pojo.dto.UserDto;
 import cn.lingex.basic.pojo.query.BaseQuery;
 import cn.lingex.basic.result.JSONResult;
@@ -10,6 +9,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletRequest;
  * @since 1.0.0
  */
 @RestController
-@RequestMapping("user")
+@RequestMapping("/user")
 @Api(tags = "基础用户")
 public class UserController {
 
@@ -31,23 +31,25 @@ public class UserController {
 
     @PostMapping
     @ApiOperation("用户列表")
-    public JSONResult<PageList<UserDto>> list(@RequestBody BaseQuery baseQuery, HttpServletRequest request){
-        System.out.println(HttpHeaders.AUTHORIZATION +":"+request.getHeader(HttpHeaders.AUTHORIZATION));
+    public JSONResult<PageList<UserDto>> list(@RequestBody BaseQuery baseQuery, HttpServletRequest request) {
+        System.out.println(HttpHeaders.AUTHORIZATION + ":" + request.getHeader(HttpHeaders.AUTHORIZATION));
         System.out.println(request.getClass());
         /* 505A0A5A728913E67A9B107DF1CD1456 */
-        System.out.println("session："+request.getSession().getId());
-        System.out.println("token:"+request.getHeader("token"));
+        System.out.println("session：" + request.getSession().getId());
+        System.out.println("token:" + request.getHeader("token"));
         return userService.pageList(baseQuery);
     }
 
     /**
      * 充值Vip
+     *
      * @param id 用户id
      * @return 统一响应对象
      */
     @GetMapping("/vip/{id}")
     @ApiOperation("vip充值")
-    public JSONResult<String> vip(@PathVariable("id") Long id){
+    @PreAuthorize("hasAnyAuthority('user:vip')")
+    public JSONResult<String> vip(@PathVariable("id") Long id) {
         return userService.vip(id);
     }
 }

@@ -1,277 +1,388 @@
-2022-06-01 11:02:53.243  WARN 2363  --- [kground-preinit] o.s.http.converter.json.Jackson2ObjectMapperBuilder:127            :
-                For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2022-06-01 11:02:54.860  WARN 3980  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+2022-06-02 09:21:00.386  WARN 2176  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
                 Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
-2022-06-01 11:02:54.863  WARN 3983  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+2022-06-02 09:21:00.392  WARN 2182  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
                 Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 11:02:57.295  WARN 6415  --- [           main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:559 :
-                Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'passwordEncoder' defined in class path resource [cn/lingex/basic/security/WebSecurityCommonConfiig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webSecurityCommonConfiig; factoryMethodName=passwordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [cn/lingex/basic/security/WebSecurityCommonConfiig.class]] for bean 'passwordEncoder': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webSecurityConfiig; factoryMethodName=passwordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [cn/lingex/basic/security/WebSecurityConfiig.class]] bound.
-2022-06-01 11:02:57.380  WARN 6500  --- [       Thread-7] com.alibaba.nacos.common.http.HttpClientBeanHolder:108             :
-                [HttpClientBeanHolder] Start destroying common HttpClient
-2022-06-01 11:02:57.381  WARN 6501  --- [       Thread-7] com.alibaba.nacos.common.http.HttpClientBeanHolder:114             :
-                [HttpClientBeanHolder] Destruction of the end
-2022-06-01 11:04:30.036  WARN 1891  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
-2022-06-01 11:04:30.040  WARN 1895  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 11:04:30.621  WARN 2476  --- [           main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:559 :
-                Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'authenticationManagerBean' defined in class path resource [cn/lingex/basic/security/WebSecurityCommonConfiig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webSecurityCommonConfiig; factoryMethodName=authenticationManagerBean; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [cn/lingex/basic/security/WebSecurityCommonConfiig.class]] for bean 'authenticationManagerBean': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webSecurityConfiig; factoryMethodName=authenticationManagerBean; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [cn/lingex/basic/security/WebSecurityConfiig.class]] bound.
-2022-06-01 11:04:30.636  WARN 2491  --- [       Thread-3] com.alibaba.nacos.common.http.HttpClientBeanHolder:108             :
-                [HttpClientBeanHolder] Start destroying common HttpClient
-2022-06-01 11:04:30.636  WARN 2491  --- [       Thread-3] com.alibaba.nacos.common.http.HttpClientBeanHolder:114             :
-                [HttpClientBeanHolder] Destruction of the end
-2022-06-01 11:07:01.902  WARN 1875  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
-2022-06-01 11:07:01.906  WARN 1879  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 11:07:02.475  WARN 2448  --- [           main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:559 :
-                Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'authenticationManagerBean' defined in class path resource [cn/lingex/basic/security/WebSecurityCommonConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webSecurityCommonConfig; factoryMethodName=authenticationManagerBean; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [cn/lingex/basic/security/WebSecurityCommonConfig.class]] for bean 'authenticationManagerBean': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webSecurityConfiig; factoryMethodName=authenticationManagerBean; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [cn/lingex/basic/security/WebSecurityConfiig.class]] bound.
-2022-06-01 11:07:02.489  WARN 2462  --- [       Thread-3] com.alibaba.nacos.common.http.HttpClientBeanHolder:108             :
-                [HttpClientBeanHolder] Start destroying common HttpClient
-2022-06-01 11:07:02.489  WARN 2462  --- [       Thread-3] com.alibaba.nacos.common.http.HttpClientBeanHolder:114             :
-                [HttpClientBeanHolder] Destruction of the end
-2022-06-01 11:08:04.570  WARN 1875  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
-2022-06-01 11:08:04.574  WARN 1879  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 11:08:06.733  WARN 4038  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+2022-06-02 09:21:06.232  WARN 8022  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
                 Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2022-06-01 11:08:07.042  WARN 4347  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
+2022-06-02 09:21:06.685  WARN 8475  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
                 No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
-2022-06-01 11:08:15.262  WARN 12567 --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+2022-06-02 09:21:15.105  WARN 16895 --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
                 No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:08:15.281  WARN 12586 --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+2022-06-02 09:21:15.110  WARN 16900 --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
                 No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:08:17.054  WARN 14359 --- [           main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:559 :
-                Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.IllegalStateException: @Order on WebSecurityConfigurers must be unique. Order of 100 was already used on cn.lingex.basic.security.WebSecurityConfiig$$EnhancerBySpringCGLIB$$ae99a65e@4850d66b, so it cannot be used on cn.lingex.basic.security.WebSecurityCommonConfig$$EnhancerBySpringCGLIB$$b3e69bd8@21f479cd too.
-2022-06-01 11:08:23.325  WARN 20630 --- [           main] org.apache.catalina.loader.WebappClassLoaderBase:173               :
-                The web application [ROOT] appears to have started a thread named [Thread-22] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.net.dns.ResolverConfigurationImpl.notifyAddrChange0(Native Method)
- sun.net.dns.ResolverConfigurationImpl$AddressChangeListener.run(ResolverConfigurationImpl.java:144)
-2022-06-01 11:08:23.325  WARN 20630 --- [           main] org.apache.catalina.loader.WebappClassLoaderBase:173               :
-                The web application [ROOT] appears to have started a thread named [logback-8] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-2022-06-01 11:08:24.326  WARN 21631 --- [      Thread-35] com.alibaba.nacos.common.notify.NotifyCenter:145                   :
-                [NotifyCenter] Start destroying Publisher
-2022-06-01 11:08:24.326  WARN 21631 --- [       Thread-3] com.alibaba.nacos.common.http.HttpClientBeanHolder:108             :
-                [HttpClientBeanHolder] Start destroying common HttpClient
-2022-06-01 11:08:24.326  WARN 21631 --- [      Thread-35] com.alibaba.nacos.common.notify.NotifyCenter:162                   :
-                [NotifyCenter] Destruction of the end
-2022-06-01 11:08:24.327  WARN 21632 --- [       Thread-3] com.alibaba.nacos.common.http.HttpClientBeanHolder:114             :
-                [HttpClientBeanHolder] Destruction of the end
-2022-06-01 11:09:05.090  WARN 1927  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
-2022-06-01 11:09:05.094  WARN 1931  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 11:09:06.036  WARN 2873  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
-                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2022-06-01 11:09:06.126  WARN 2963  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
-                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
-2022-06-01 11:09:10.150  WARN 6987  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:09:10.154  WARN 6991  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:09:11.250  WARN 8087  --- [           main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:559 :
-                Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.IllegalStateException: @Order on WebSecurityConfigurers must be unique. Order of 100 was already used on cn.lingex.basic.security.WebSecurityConfiig$$EnhancerBySpringCGLIB$$b73cb1eb@6d0a4a22, so it cannot be used on cn.lingex.basic.security.WebSecurityCommonConfig$$EnhancerBySpringCGLIB$$bc89a765@1999e1f5 too.
-2022-06-01 11:09:17.502  WARN 14339 --- [           main] org.apache.catalina.loader.WebappClassLoaderBase:173               :
-                The web application [ROOT] appears to have started a thread named [Thread-16] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.net.dns.ResolverConfigurationImpl.notifyAddrChange0(Native Method)
- sun.net.dns.ResolverConfigurationImpl$AddressChangeListener.run(ResolverConfigurationImpl.java:144)
-2022-06-01 11:09:18.501  WARN 15338 --- [      Thread-26] com.alibaba.nacos.common.notify.NotifyCenter:145                   :
-                [NotifyCenter] Start destroying Publisher
-2022-06-01 11:09:18.501  WARN 15338 --- [       Thread-3] com.alibaba.nacos.common.http.HttpClientBeanHolder:108             :
-                [HttpClientBeanHolder] Start destroying common HttpClient
-2022-06-01 11:09:18.502  WARN 15339 --- [      Thread-26] com.alibaba.nacos.common.notify.NotifyCenter:162                   :
-                [NotifyCenter] Destruction of the end
-2022-06-01 11:09:18.502  WARN 15339 --- [       Thread-3] com.alibaba.nacos.common.http.HttpClientBeanHolder:114             :
-                [HttpClientBeanHolder] Destruction of the end
-2022-06-01 11:09:50.356  WARN 1776  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
-2022-06-01 11:09:50.360  WARN 1780  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 11:09:51.306  WARN 2726  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
-                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2022-06-01 11:09:51.391  WARN 2811  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
-                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
-2022-06-01 11:09:55.373  WARN 6793  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:09:55.376  WARN 6796  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:09:56.464  WARN 7884  --- [           main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:559 :
-                Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.IllegalStateException: @Order on WebSecurityConfigurers must be unique. Order of 100 was already used on cn.lingex.basic.security.WebSecurityConfiig$$EnhancerBySpringCGLIB$$38c080bb@18df26a1, so it cannot be used on cn.lingex.basic.security.WebSecurityCommonConfig$$EnhancerBySpringCGLIB$$3e0d7635@5c459194 too.
-2022-06-01 11:10:02.689  WARN 14109 --- [           main] org.apache.catalina.loader.WebappClassLoaderBase:173               :
-                The web application [ROOT] appears to have started a thread named [Thread-16] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.net.dns.ResolverConfigurationImpl.notifyAddrChange0(Native Method)
- sun.net.dns.ResolverConfigurationImpl$AddressChangeListener.run(ResolverConfigurationImpl.java:144)
-2022-06-01 11:10:03.684  WARN 15104 --- [       Thread-3] com.alibaba.nacos.common.http.HttpClientBeanHolder:108             :
-                [HttpClientBeanHolder] Start destroying common HttpClient
-2022-06-01 11:10:03.684  WARN 15104 --- [      Thread-26] com.alibaba.nacos.common.notify.NotifyCenter:145                   :
-                [NotifyCenter] Start destroying Publisher
-2022-06-01 11:10:03.685  WARN 15105 --- [      Thread-26] com.alibaba.nacos.common.notify.NotifyCenter:162                   :
-                [NotifyCenter] Destruction of the end
-2022-06-01 11:10:03.685  WARN 15105 --- [       Thread-3] com.alibaba.nacos.common.http.HttpClientBeanHolder:114             :
-                [HttpClientBeanHolder] Destruction of the end
-2022-06-01 11:12:45.914  WARN 1921  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
-2022-06-01 11:12:45.919  WARN 1926  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 11:12:47.099  WARN 3106  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
-                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2022-06-01 11:12:52.408  WARN 8415  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:12:52.411  WARN 8418  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:19:57.330  WARN 1895  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
-2022-06-01 11:19:57.334  WARN 1899  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 11:19:58.559  WARN 3124  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
-                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2022-06-01 11:19:58.649  WARN 3214  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
-                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
-2022-06-01 11:20:02.659  WARN 7224  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:20:02.663  WARN 7228  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:20:03.739  WARN 8304  --- [           main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:559 :
-                Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.IllegalStateException: @Order on WebSecurityConfigurers must be unique. Order of 100 was already used on cn.lingex.basic.security.WebSecurityConfiig$$EnhancerBySpringCGLIB$$376b11b@dd77e0d, so it cannot be used on cn.lingex.basic.security.WebSecurityCommonConfig$$EnhancerBySpringCGLIB$$8c3a695@799cf32d too.
-2022-06-01 11:20:09.952  WARN 14517 --- [           main] org.apache.catalina.loader.WebappClassLoaderBase:173               :
-                The web application [ROOT] appears to have started a thread named [Thread-16] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.net.dns.ResolverConfigurationImpl.notifyAddrChange0(Native Method)
- sun.net.dns.ResolverConfigurationImpl$AddressChangeListener.run(ResolverConfigurationImpl.java:144)
-2022-06-01 11:20:10.956  WARN 15521 --- [       Thread-3] com.alibaba.nacos.common.http.HttpClientBeanHolder:108             :
-                [HttpClientBeanHolder] Start destroying common HttpClient
-2022-06-01 11:20:10.956  WARN 15521 --- [      Thread-26] com.alibaba.nacos.common.notify.NotifyCenter:145                   :
-                [NotifyCenter] Start destroying Publisher
-2022-06-01 11:20:10.956  WARN 15521 --- [      Thread-26] com.alibaba.nacos.common.notify.NotifyCenter:162                   :
-                [NotifyCenter] Destruction of the end
-2022-06-01 11:20:10.957  WARN 15522 --- [       Thread-3] com.alibaba.nacos.common.http.HttpClientBeanHolder:114             :
-                [HttpClientBeanHolder] Destruction of the end
-2022-06-01 11:21:45.212  WARN 2022  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
-2022-06-01 11:21:45.217  WARN 2027  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 11:21:46.331  WARN 3141  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
-                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2022-06-01 11:21:46.423  WARN 3233  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
-                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
-2022-06-01 11:21:51.921  WARN 8731  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:21:51.924  WARN 8734  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:21:54.073  WARN 10883 --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+2022-06-02 09:21:18.334  WARN 20124 --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
                 All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
-2022-06-01 11:30:14.999  WARN 1869  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
-2022-06-01 11:30:15.002  WARN 1872  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 11:30:15.965  WARN 2835  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
-                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2022-06-01 11:30:16.055  WARN 2925  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
-                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
-2022-06-01 11:30:20.228  WARN 7098  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:30:20.231  WARN 7101  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:30:22.022  WARN 8892  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
-                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
-2022-06-01 11:32:08.435  WARN 1885  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
-2022-06-01 11:32:08.439  WARN 1889  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 11:32:09.410  WARN 2860  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
-                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2022-06-01 11:32:09.499  WARN 2949  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
-                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
-2022-06-01 11:32:13.633  WARN 7083  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:32:13.636  WARN 7086  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:32:15.350  WARN 8800  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
-                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
-2022-06-01 11:36:01.289  WARN 1907  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
-2022-06-01 11:36:01.293  WARN 1911  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 11:36:02.269  WARN 2887  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
-                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2022-06-01 11:36:02.360  WARN 2978  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
-                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
-2022-06-01 11:36:06.563  WARN 7181  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:36:06.567  WARN 7185  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:36:08.283  WARN 8901  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
-                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
-2022-06-01 11:43:31.621  WARN 1900  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
-2022-06-01 11:43:31.625  WARN 1904  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 11:43:32.621  WARN 2900  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
-                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2022-06-01 11:43:32.710  WARN 2989  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
-                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
-2022-06-01 11:43:36.932  WARN 7211  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:43:36.936  WARN 7215  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:43:38.603  WARN 8882  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
-                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
-2022-06-01 11:43:53.268  WARN 1912  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
-2022-06-01 11:43:53.271  WARN 1915  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
-                Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 11:43:54.536  WARN 3180  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
-                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2022-06-01 11:43:59.834  WARN 8478  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:43:59.838  WARN 8482  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:44:23.085  WARN 1921  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+2022-06-02 09:21:18.909  WARN 2199  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
                 Ignore the empty nacos configuration and get it based on dataId[order-server] & group[DEFAULT_GROUP]
-2022-06-01 11:44:23.089  WARN 1925  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+2022-06-02 09:21:18.912  WARN 2202  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
                 Ignore the empty nacos configuration and get it based on dataId[order-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 11:44:24.080  WARN 2916  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+2022-06-02 09:21:20.000  WARN 3290  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
                 Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2022-06-01 11:44:28.859  WARN 7695  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:44:28.862  WARN 7698  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
-                No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:44:35.388  WARN 1901  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+2022-06-02 09:21:26.414  WARN 2291  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
                 Ignore the empty nacos configuration and get it based on dataId[stock-server] & group[DEFAULT_GROUP]
-2022-06-01 11:44:35.391  WARN 1904  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+2022-06-02 09:21:26.418  WARN 2295  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
                 Ignore the empty nacos configuration and get it based on dataId[stock-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 11:44:36.413  WARN 2926  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+2022-06-02 09:21:26.714  WARN 10004 --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 09:21:26.718  WARN 10008 --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 09:21:27.585  WARN 3462  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
                 Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2022-06-01 11:44:41.306  WARN 7819  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+2022-06-02 09:21:32.764  WARN 8641  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
                 No URLs will be polled as dynamic configuration sources.
-2022-06-01 11:44:41.309  WARN 7822  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+2022-06-02 09:21:32.768  WARN 8645  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
                 No URLs will be polled as dynamic configuration sources.
-2022-06-01 16:12:55.495  WARN 2533  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+2022-06-02 09:21:41.983  WARN 2001  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
                 Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
-2022-06-01 16:12:55.535  WARN 2573  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+2022-06-02 09:21:41.988  WARN 2006  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
                 Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 16:12:57.136  WARN 4174  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+2022-06-02 09:21:43.291  WARN 3309  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
                 Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2022-06-01 16:13:04.527  WARN 11565 --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+2022-06-02 09:21:49.090  WARN 9108  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
                 No URLs will be polled as dynamic configuration sources.
-2022-06-01 16:13:04.531  WARN 11569 --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+2022-06-02 09:21:49.093  WARN 9111  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
                 No URLs will be polled as dynamic configuration sources.
-2022-06-01 16:32:55.681  WARN 1973  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+2022-06-02 09:21:50.190  WARN 10208 --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 09:32:15.327  WARN 2238  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
                 Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
-2022-06-01 16:32:55.684  WARN 1976  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+2022-06-02 09:32:15.331  WARN 2242  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
                 Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
-2022-06-01 16:32:57.095  WARN 3387  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+2022-06-02 09:32:16.520  WARN 3431  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
                 Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2022-06-01 16:33:02.244  WARN 8536  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+2022-06-02 09:32:22.160  WARN 9071  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
                 No URLs will be polled as dynamic configuration sources.
-2022-06-01 16:33:02.247  WARN 8539  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+2022-06-02 09:32:22.164  WARN 9075  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
                 No URLs will be polled as dynamic configuration sources.
+2022-06-02 09:32:23.241  WARN 10152 --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 09:37:05.333  WARN 2085  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
+2022-06-02 09:37:05.336  WARN 2088  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 09:37:06.853  WARN 3605  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 09:37:12.323  WARN 9075  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 09:37:12.327  WARN 9079  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 09:37:13.361  WARN 10113 --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 09:51:14.107  WARN 2207  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
+2022-06-02 09:51:14.110  WARN 2210  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 09:51:15.306  WARN 3406  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 09:51:20.991  WARN 9091  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 09:51:20.994  WARN 9094  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 09:51:22.083  WARN 10183 --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 09:51:50.621  WARN 2117  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
+2022-06-02 09:51:50.624  WARN 2120  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 09:51:51.873  WARN 3369  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 09:51:57.544  WARN 9040  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 09:51:57.547  WARN 9043  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 09:51:58.616  WARN 10112 --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 09:52:50.293  WARN 1952  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
+2022-06-02 09:52:50.297  WARN 1956  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 09:52:51.402  WARN 3061  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 09:52:56.767  WARN 8426  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 09:52:56.771  WARN 8430  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 09:52:57.832  WARN 9491  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 09:55:08.365  WARN 2123  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
+2022-06-02 09:55:08.369  WARN 2127  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 09:55:09.480  WARN 3238  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 09:55:14.839  WARN 8597  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 09:55:14.844  WARN 8602  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 09:55:15.873  WARN 9631  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 09:57:27.216  WARN 2116  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-06-02 09:57:27.219  WARN 2119  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 09:57:28.196  WARN 3096  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 09:57:28.292  WARN 3192  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
+                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
+2022-06-02 09:57:32.528  WARN 7428  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 09:57:32.531  WARN 7431  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 09:57:34.258  WARN 9158  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 09:57:40.464  WARN 1931  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
+2022-06-02 09:57:40.468  WARN 1935  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 09:57:41.591  WARN 3058  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 09:57:47.097  WARN 8564  --- [           main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:559 :
+                Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationManagerBean' defined in class path resource [cn/lingex/basic/security/WebSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.authentication.AuthenticationManager]: Factory method 'authenticationManagerBean' threw exception; nested exception is org.springframework.beans.FatalBeanException: A dependency cycle was detected when trying to resolve the AuthenticationManager. Please ensure you have configured authentication.
+2022-06-02 09:57:53.340  WARN 14807 --- [           main] org.apache.catalina.loader.WebappClassLoaderBase:173               :
+                The web application [ROOT] appears to have started a thread named [Thread-16] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.net.dns.ResolverConfigurationImpl.notifyAddrChange0(Native Method)
+ sun.net.dns.ResolverConfigurationImpl$AddressChangeListener.run(ResolverConfigurationImpl.java:144)
+2022-06-02 09:57:54.326  WARN 15793 --- [      Thread-30] com.alibaba.nacos.common.notify.NotifyCenter:145                   :
+                [NotifyCenter] Start destroying Publisher
+2022-06-02 09:57:54.326  WARN 15793 --- [       Thread-3] com.alibaba.nacos.common.http.HttpClientBeanHolder:108             :
+                [HttpClientBeanHolder] Start destroying common HttpClient
+2022-06-02 09:57:54.327  WARN 15794 --- [      Thread-30] com.alibaba.nacos.common.notify.NotifyCenter:162                   :
+                [NotifyCenter] Destruction of the end
+2022-06-02 09:57:54.327  WARN 15794 --- [       Thread-3] com.alibaba.nacos.common.http.HttpClientBeanHolder:114             :
+                [HttpClientBeanHolder] Destruction of the end
+2022-06-02 09:58:21.705  WARN 1944  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
+2022-06-02 09:58:21.708  WARN 1947  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 09:58:22.830  WARN 3069  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 09:58:28.117  WARN 8356  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 09:58:28.121  WARN 8360  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 09:58:29.160  WARN 9399  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 10:55:52.513  WARN 2031  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-06-02 10:55:52.517  WARN 2035  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 10:55:54.078  WARN 3596  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 10:55:54.175  WARN 3693  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
+                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
+2022-06-02 10:55:59.658  WARN 9176  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 10:55:59.662  WARN 9180  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 10:56:01.376  WARN 10894 --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 10:56:13.474  WARN 1933  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
+2022-06-02 10:56:13.477  WARN 1936  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 10:56:14.689  WARN 3148  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 10:56:20.083  WARN 8542  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 10:56:20.087  WARN 8546  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 10:56:21.132  WARN 9591  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 10:58:23.946  WARN 2036  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
+2022-06-02 10:58:23.949  WARN 2039  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 10:58:25.128  WARN 3218  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 10:58:30.471  WARN 8561  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 10:58:30.474  WARN 8564  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 10:58:31.510  WARN 9600  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 11:10:49.404  WARN 1982  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
+2022-06-02 11:10:49.407  WARN 1985  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 11:10:50.518  WARN 3096  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 11:10:55.956  WARN 8534  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:10:55.958  WARN 8536  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:10:57.018  WARN 9596  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 11:11:11.279  WARN 1943  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-06-02 11:11:11.283  WARN 1947  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 11:11:12.243  WARN 2907  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 11:11:12.333  WARN 2997  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
+                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
+2022-06-02 11:11:16.449  WARN 7113  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:11:16.452  WARN 7116  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:11:18.135  WARN 8799  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 11:13:40.998  WARN 2021  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-06-02 11:13:41.001  WARN 2024  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 11:13:42.082  WARN 3105  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 11:13:42.182  WARN 3205  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
+                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
+2022-06-02 11:13:46.256  WARN 7279  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:13:46.260  WARN 7283  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:13:48.003  WARN 9026  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 11:15:39.001  WARN 1889  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-06-02 11:15:39.004  WARN 1892  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 11:15:39.972  WARN 2860  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 11:15:40.062  WARN 2950  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
+                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
+2022-06-02 11:15:44.265  WARN 7153  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:15:44.268  WARN 7156  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:15:45.971  WARN 8859  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 11:17:54.352  WARN 1981  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-06-02 11:17:54.355  WARN 1984  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 11:17:55.371  WARN 3000  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 11:17:55.536  WARN 3165  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
+                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
+2022-06-02 11:17:59.824  WARN 7453  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:17:59.828  WARN 7457  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:18:01.583  WARN 9212  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 11:18:43.252  WARN 1958  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-06-02 11:18:43.256  WARN 1962  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 11:18:44.377  WARN 3083  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 11:18:44.543  WARN 3249  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
+                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
+2022-06-02 11:18:48.811  WARN 7517  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:18:48.815  WARN 7521  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:18:50.549  WARN 9255  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 11:22:23.433  WARN 2008  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-06-02 11:22:23.436  WARN 2011  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 11:22:24.513  WARN 3088  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 11:22:24.653  WARN 3228  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
+                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
+2022-06-02 11:22:29.025  WARN 7600  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:22:29.032  WARN 7607  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:22:30.847  WARN 9422  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 11:31:15.467  WARN 1910  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-06-02 11:31:15.471  WARN 1914  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 11:31:16.456  WARN 2899  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 11:31:16.633  WARN 3076  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
+                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
+2022-06-02 11:31:21.080  WARN 7523  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:31:21.084  WARN 7527  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:31:22.875  WARN 9318  --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 11:32:54.276  WARN 1951  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-06-02 11:32:54.279  WARN 1954  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 11:32:55.301  WARN 2976  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 11:32:55.484  WARN 3159  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
+                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
+2022-06-02 11:33:01.551  WARN 9226  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:33:01.556  WARN 9231  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:33:02.452  WARN 2366  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
+2022-06-02 11:33:02.455  WARN 2369  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 11:33:03.467  WARN 11142 --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 11:33:03.919  WARN 3833  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 11:33:09.822  WARN 9736  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:33:09.825  WARN 9739  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:33:10.857  WARN 10771 --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 11:37:32.341  WARN 1967  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-06-02 11:37:32.345  WARN 1971  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[auth-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 11:37:33.918  WARN 3544  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 11:37:34.183  WARN 3809  --- [           main] org.mybatis.spring.mapper.ClassPathMapperScanner:44                :
+                No MyBatis mapper was found in '[cn.lingex]' package. Please check your configuration.
+2022-06-02 11:37:36.800  WARN 2159  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
+2022-06-02 11:37:36.803  WARN 2162  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 11:37:38.294  WARN 3653  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 11:37:39.798  WARN 9424  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:37:39.803  WARN 9429  --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:37:41.801  WARN 11427 --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 11:37:44.672  WARN 10031 --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:37:44.676  WARN 10035 --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 11:37:45.812  WARN 11171 --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 14:14:19.830  WARN 2201  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
+2022-06-02 14:14:19.833  WARN 2204  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 14:14:21.709  WARN 4080  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 14:14:28.567  WARN 10938 --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 14:14:28.570  WARN 10941 --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 14:14:29.816  WARN 12187 --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-06-02 14:21:50.292  WARN 2119  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server] & group[DEFAULT_GROUP]
+2022-06-02 14:21:50.295  WARN 2122  --- [           main] com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87       :
+                Ignore the empty nacos configuration and get it based on dataId[user-server.yaml] & group[DEFAULT_GROUP]
+2022-06-02 14:21:52.147  WARN 3974  --- [           main] org.springframework.boot.actuate.endpoint.EndpointId:155           :
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-06-02 14:21:58.717  WARN 10544 --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 14:21:58.720  WARN 10547 --- [           main] com.netflix.config.sources.URLConfigurationSource:121              :
+                No URLs will be polled as dynamic configuration sources.
+2022-06-02 14:21:59.784  WARN 11611 --- [           main] o.s.c.security.oauth2.SpringCloudSecurityAutoConfiguration:38      :
+                All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.

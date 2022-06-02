@@ -27,8 +27,17 @@ import java.util.List;
 @RestControllerAdvice
 public class GlobalException {
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    public static Class<?> aClass = null;
 
+    static {
+        try {
+            aClass = Class.forName("org.springframework.security.access.AccessDeniedException");
+        } catch (ClassNotFoundException e) {
+            LoggerFactory.getLogger(GlobalException.class).error("创建AccessDeniedException字节码对象时失败");
+        }
+    }
+
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     /**
      * 抓取JSR303异常
@@ -97,6 +106,9 @@ public class GlobalException {
     public JSONResult<String> captureRuntimeException(Exception e, HttpServletRequest request, HttpServletResponse response) {
         this.error(e, request);
         response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+        if (e.getClass().equals(aClass)) {
+            return JSONResult.failure(e.getMessage());
+        }
         return JSONResult.failure("网络繁忙");
     }
 
